@@ -49,12 +49,12 @@ var deck = decked({
 	// is ace 1 or 14
 	ace:'high',
 
-	// will the deck have 2 jokers inside (number 0)
-	jokers:true
+	// will the deck have 2 jokers inside (card number 0)
+	jokers:2
 
 })
 
-var cards = deck.cards()
+var cards = deck()
 
 console.log(cards.length)
 
@@ -66,12 +66,12 @@ You can pass a filter into the cards function to create a deck with only certain
 ```js
 
 // a filter that will remove diamonds
-var noDiamonds = deck.cards(function(card){
+var noDiamonds = deck(function(card){
 	return card.suit != 'diamond'
 })
 
 // a filter that only returns face cards
-var faceCards = deck.cards(function(card){
+var faceCards = deck(function(card){
 	return card.number >= 11
 })
 ```
@@ -85,7 +85,7 @@ create a new deck of cards with the given config options:
  * ace ('low' | 'high') - sets the numeric value of the ace to 1 or 14
  * jokers (true | false) - should the deck contain 2 jokers or not
 
-### `var pack = deck.cards(filter)`
+### `var cards = deck(filter)`
 
 get an array of card objects with an optional filter (which can be an array of filters)
 
