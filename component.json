@@ -1,0 +1,16 @@
+{
+  "name": "decked",
+  "repo": "binocarlos/decked",
+  "description": "Generate a list of playing cards based on a configurable pack",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "kitto1/scruffy-shuffle": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

@@ -1,6 +1,8 @@
 decked
 ======
 
+[![Travis](http://img.shields.io/travis/binocarlos/decked.svg?style=flat)](https://travis-ci.org/binocarlos/decked)
+
 Generate a list of playing cards based on a configurable pack
 
 ## installation
