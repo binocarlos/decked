@@ -60,3 +60,19 @@ tape('pack with low aces', function(t){
 
   t.end()
 })
+
+
+tape('filtered pack', function(t){
+  var deck = decked()
+  var cards = deck(function(card){
+    return card.suit=='diamond'
+  })
+
+  t.equal(cards.length, 13)
+
+  cards.forEach(function(card){
+    t.equal(card.suit, 'diamond', 'card ' + card.name + ' is a diamond')
+  })
+
+  t.end()
+})
