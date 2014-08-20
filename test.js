@@ -76,3 +76,19 @@ tape('filtered pack', function(t){
 
   t.end()
 })
+
+
+tape('sequence 0 till 15', function(t){
+  var deck = decked.sequence({
+    low:0,
+    high:15
+  })
+  var cards = deck()
+
+  t.equal(cards.length, 64, '64 cards') // 0 -> 15 = 15 cards x 4
+
+  t.equal(cards[0].number, 0, 'the first card is number 0')
+  t.equal(cards[cards.length-1].number, 15, 'the last card is number 15')
+
+  t.end()
+})

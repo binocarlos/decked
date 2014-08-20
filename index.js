@@ -61,3 +61,22 @@ module.exports = function(opts){
 		})
 	}
 }
+
+module.exports.sequence = function(opts){
+	opts = opts || {}
+
+	var allCards = []
+
+	var low = typeof(opts.low)=='number' ? opts.low : 1
+	var high = opts.high || 10
+
+	for(var c=low; c<=high; c++){
+		allCards = allCards.concat(makeCards(c))
+	}
+
+	return function(filter){
+		return allCards.filter(function(card){
+			return filter ? filter(card) : true
+		})
+	}
+}

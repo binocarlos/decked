@@ -87,6 +87,15 @@ create a new deck of cards with the given config options:
  * ace ('low' | 'high') - sets the numeric value of the ace to 1 or 14
  * jokers (true | false) - should the deck contain 2 jokers or not
 
+### `var deck = decked.sequence(config)`
+
+create a sequence with each number having 4 cards (1 per suit)
+
+config is:
+
+ * low - the start of the sequence (0)
+ * high - the end of the sequence (10)
+
 ### `var cards = deck(filter)`
 
 get an array of card objects with an optional filter (which can be an array of filters)
